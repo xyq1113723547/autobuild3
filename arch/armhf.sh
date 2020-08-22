@@ -4,3 +4,4 @@
 CFLAGS_COMMON_ARCH='-march=armv7-a -mtune=cortex-a7 -mfloat-abi=hard -mfpu=neon -mthumb '
 LDFLAGS_COMMON_CROSS='-Wl,-rpath -Wl,/usr/lib -Wl,-rpath-link -Wl,/var/ab/cross-root/armhf/usr/lib -L/var/ab/cross-root/armhf/usr/lib '
 RUSTFLAGS_COMMON_ARCH='--target armv7-unknown-linux-gnueabihf -Ctarget-feature=+neon,+d32 ' # TODO: research the -C llvm-args needed for -mtune if any
+# TODO: figure out RUSTFLAGS_COMMON_CROSS. I think "-C link-args='$LDFLAGS_COMMON_CROSS'" will do, but check the warings in https://doc.rust-lang.org/beta/unstable-book/language-features/link-args.html
