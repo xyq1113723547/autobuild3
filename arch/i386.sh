@@ -5,5 +5,6 @@
 CFLAGS_COMMON_ARCH='-fomit-frame-pointer -march=pentium4 -mtune=core2 -msse -msse2 -msse3 -msahf '
 CFLAGS_GCC_ARCH=' -mhle '
 HOSTTOOLPREFIX=/opt/32/bin/i686-pc-linux-gnu
+RUSTFLAGS_COMMON_ARCH='--target i686-unknown-linux-gnu  -Ctarget-feature=+sahf '
 export PKG_CONFIG_DIR=/opt/32/lib/pkgconfig
 unset LDFLAGS_COMMON_CROSS_BASE

@@ -3,3 +3,4 @@
 ##                    Intel Haswell+, AMD bdver4+, VIA eden-x4+.
 ##@copyright GPL-2.0+
 CFLAGS_COMMON_ARCH=' -fomit-frame-pointer -march=haswell -mno-rdrnd '
+RUSTFLAGS_COMMON_ARCH='-Ctarget-cpu=haswell -Ctarget-feature=-rdrnd '
