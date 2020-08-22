@@ -3,6 +3,7 @@
 ##@copyright GPL-2.0+
 [[ $ABBUILD != $ABHOST ]] || aberr "The i386 arch is cross-only, for multilib purposes."
 CFLAGS_COMMON_ARCH='-fomit-frame-pointer -march=pentium4 -mtune=core2 -msse -msse2 -msse3 -msahf '
+CFLAGS_GCC_ARCH=' -mhle '
 HOSTTOOLPREFIX=/opt/32/bin/i686-pc-linux-gnu
 export PKG_CONFIG_DIR=/opt/32/lib/pkgconfig
 unset LDFLAGS_COMMON_CROSS_BASE
