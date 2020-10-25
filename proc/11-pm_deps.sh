@@ -4,7 +4,12 @@
 abrequire pm
 
 # FIXME: The flat stuff gets stupid with 'foo | bar' packs. Guess why.
-FLATDEP="$(pm_deflat $PKGDEP $BUILDDEP)"
+if [[ $RMBDEP == 1 ]]; then
+	FLATDEP="$(pm_deflat $BUILDDEP)"
+else
+	FLATDEP="$(pm_deflat $PKGDEP $BUILDDEP)"
+fi
+
 if ! pm_exists $FLATDEP; then
 	abinfo "Build or runtime dependencies not satisfied, now fetching needed packages."
 	pm_repoupdate
