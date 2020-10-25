@@ -11,6 +11,7 @@ NOSTATIC=yes			# Want those big fat static libraries?
 ABCLEAN=yes			# Clean before build?
 NOLIBTOOL=yes			# Hug pkg-config and CMake configurations?
 ABCONFIGHACK=yes		# Use config.{sub,guess} replacement for newer architectures?
+BUILDDEPONLY=0			# Avoid installing runtime dependencies when building?
 
 # Strict Autotools option checking?
 AUTOTOOLS_STRICT=yes
